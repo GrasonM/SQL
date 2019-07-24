@@ -1,0 +1,3 @@
+SELECT DISTINCT E.AccountingCode AS Unit, EPMSP.Quantity, UOM.Code AS UOM, P.PartNum AS [Part Number], P.Description
+FROM UnitOfMeasure AS UOM INNER JOIN (Part AS P INNER JOIN ((Equipment_PMSetup AS EPMS INNER JOIN Equipment AS E ON EPMS.EquipmentID = E.EquipmentID) INNER JOIN Equipment_PMSetupPart AS EPMSP ON EPMS.Equipment_PMSetupID = EPMSP.Equipment_PMSetupID) ON P.PartID = EPMSP.Part_PartID) ON UOM.LegacyKey = P.Part_UnitOfMeasureID
+ORDER BY E.AccountingCode;
