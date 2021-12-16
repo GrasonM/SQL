@@ -1,2 +1,2 @@
 # Work
-This repository is a collection of all of the reports that I built over the course of one year.
+This repository is a collection of all of the SQL tools and reports that i've been building built over the course of my career.
